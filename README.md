@@ -19,18 +19,64 @@ The Definitions Of Done (DoD) for our project are aligned with the professor's r
    - Develop a recommendation system to enhance the user experience.
 
 ## Project Repositories
+The project is divided in two parts :
+- the backend repository : which uses the Java Spring Boot framework and Postgresql with POJA.
+- the frontend repository : coded with React Typescript and uses Tailwind CSS, shadcn UI components, react-router etc..
 
 ### Backend Repository
 
 Our backend logic and API are housed in the following repository:
 
 [Blogify API Repository](https://github.com/blogify-app/blogify-api)
+#### How to use the app ?
+The principle of POJA is that it deploys directly the application So you can check in the Github Actions and search for the deployed app link.
 
 ### Frontend Repository
 
 The frontend, responsible for the user interface, is located in the following repository:
 
 [Blogify Web Repository](https://github.com/blogify-app/blogify-web)
+#### How to use the app ?
+Those are the requirements : 
+- Have a recent version of Node JS
+- Get yarn
+
+All you have to do is :
+- Clone the repository
+- Install the packages with `yarn install`
+- Run `yarn dev` if you want to see qht it looks like.
+- Here are some commands you can use to execute some taska in our project :
+```javascript
+"scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "preview": "vite preview",
+    "gen-cmp": "shadcn-ui add",
+    "test:e2e": "cypress run --spec cypress/e2e/**/*",
+    "test:unit": "cypress run --component",
+    "test:open": "cypress open",
+    "test:e2e:ci": "concurrently \"yarn dev\" \"yarn test:e2e\"",
+    "test:ci": "test:unit && test:e2e:ci"
+  },
+```
+
+However, you don't really need to do all of this to see what our app looks like, here is the link of the deployed app : 
+[[https://vercel-prod.vercel.app/](https://blogify-prod.vercel.app/)]
+
+### Upcoming Features
+- Recommandation system AI
+- Blogify posts list
+- A more structured and well designed Blogif
+   
+## Known Issues
+
+Help us to find bugs !
+Put it in the issues of each project-part :
+- [https://github.com/blogify-app/blogify-web/issues](https://github.com/blogify-app/blogify-web/issues)
+- [https://github.com/blogify-app/blogify-api/issues](https://github.com/blogify-app/blogify-api/issues)
 
 ## How to Contribute
 
